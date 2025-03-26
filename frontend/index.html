@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor de PDVs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Monitor de PDVs</h1>
+        
+        <div class="pdv-grid">
+            <!-- PDV 1 -->
+            <div class="pdv-container">
+                <div class="pdv-header">
+                    <h2>PDV 1</h2>
+                    <div class="status-indicator" id="status-1">Desconectado</div>
+                </div>
+                <div class="pdv-log" id="log-1"></div>
+                <div class="pdv-controls">
+                    <input type="text" id="ip-1" value="192.168.104.201" placeholder="IP do PDV">
+                    <button onclick="connectPDV(1)">Conectar</button>
+                    <button onclick="clearLog(1)">Limpar</button>
+                </div>
+            </div>
+            
+            <!-- PDV 2 -->
+            <div class="pdv-container">
+                <div class="pdv-header">
+                    <h2>PDV 2</h2>
+                    <div class="status-indicator" id="status-2">Desconectado</div>
+                </div>
+                <div class="pdv-log" id="log-2"></div>
+                <div class="pdv-controls">
+                    <input type="text" id="ip-2" value="192.168.104.205" placeholder="IP do PDV">
+                    <button onclick="connectPDV(2)">Conectar</button>
+                    <button onclick="clearLog(2)">Limpar</button>
+                </div>
+            </div>
+            
+            <!-- PDV 3 -->
+            <div class="pdv-container">
+                <div class="pdv-header">
+                    <h2>PDV 3</h2>
+                    <div class="status-indicator" id="status-3">Desconectado</div>
+                </div>
+                <div class="pdv-log" id="log-3"></div>
+                <div class="pdv-controls">
+                    <input type="text" id="ip-3" value="192.168.104.216" placeholder="IP do PDV">
+                    <button onclick="connectPDV(3)">Conectar</button>
+                    <button onclick="clearLog(3)">Limpar</button>
+                </div>
+            </div>
+            
+            <!-- PDV 4 -->
+            <div class="pdv-container">
+                <div class="pdv-header">
+                    <h2>PDV 4</h2>
+                    <div class="status-indicator" id="status-4">Desconectado</div>
+                </div>
+                <div class="pdv-log" id="log-4"></div>
+                <div class="pdv-controls">
+                    <input type="text" id="ip-4" value="192.168.104.218" placeholder="IP do PDV">
+                    <button onclick="connectPDV(4)">Conectar</button>
+                    <button onclick="clearLog(4)">Limpar</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="server-status">
+            <p>Status do Servidor: <span id="server-status">Desconectado</span></p>
+            <input type="text" id="server-ip" value="localhost" placeholder="IP do Servidor">
+            <input type="text" id="server-port" value="8765" placeholder="Porta do Servidor">
+            <button onclick="connectToServer()">Conectar ao Servidor</button>
+            <button onclick="disconnectFromServer()">Desconectar</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

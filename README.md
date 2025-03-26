@@ -1,4 +1,4 @@
-# Documentação do Sistema PDV Listener
+# Documentação do Sistema
 
 ## Visão Geral
 Sistema para monitoramento de dados de PDVs (Pontos de Venda) em tempo real, com recepção via UDP e visualização em navegador.
